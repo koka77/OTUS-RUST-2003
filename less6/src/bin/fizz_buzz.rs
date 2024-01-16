@@ -12,9 +12,15 @@
 */
 
 fn fizzbuzz(num: u32) -> String {
-    if (num % 3 == 0) && (num % 5 == 0) { "FizzBuzz".into() }
-    else if num % 3 == 0 { "Fizz".into() }
-    else if num % 5 == 0 { "Buzz".into() } else { num.to_string() }
+    if (num % 3 == 0) && (num % 5 == 0) {
+        "FizzBuzz".into()
+    } else if num % 3 == 0 {
+        "Fizz".into()
+    } else if num % 5 == 0 {
+        "Buzz".into()
+    } else {
+        num.to_string()
+    }
 }
 
 fn fizzbuzz_list(num: u32) -> Vec<String> {

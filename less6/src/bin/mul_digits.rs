@@ -7,14 +7,23 @@
 
 //
 pub fn digit_product(n: u32) -> u8 {
-    if n == 0 { return 0 }
+    if n == 0 {
+        return 0;
+    }
     let radix: u32 = 10;
-    let res = n.to_string().chars().into_iter().map(|c| c.to_digit(radix).unwrap())
+    let res = n
+        .to_string()
+        .chars()
+        .into_iter()
+        .map(|c| c.to_digit(radix).unwrap())
         .filter(|i| i > &0)
-        .reduce(|a, b| { a * b }).unwrap();
+        .reduce(|a, b| a * b)
+        .unwrap();
     if res.to_string().len() > 1 {
         digit_product(res)
-    } else { res.try_into().unwrap() }
+    } else {
+        res.try_into().unwrap()
+    }
 }
 
 #[cfg(test)]

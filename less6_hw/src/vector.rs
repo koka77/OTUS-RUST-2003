@@ -21,3 +21,28 @@ pub fn vec3_scalar_sum(a: Vec3, b: Vec3) -> i32 {
     }
     c
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_default_vec3() {
+        let arr = [0; VEC3_LEN];
+        assert_eq!(default_vec3(), arr)
+    }
+
+    #[test]
+    fn test_vec3_vector_sum() {
+        let arr1 = [1, 2, 3];
+        let arr2 = [2, 3, 4];
+        assert_eq!(vec3_vector_sum(arr1, arr2), [3, 5, 7])
+    }
+
+    #[test]
+    fn test_vec3_scalar_sum() {
+        let arr1 = [1, 2, 3];
+        let arr2 = [2, 3, 4];
+        assert_eq!(vec3_scalar_sum(arr1, arr2), 15)
+    }
+}

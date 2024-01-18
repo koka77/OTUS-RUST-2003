@@ -11,7 +11,7 @@ pub fn digit_product(n: u32) -> u8 {
         return 0;
     }
     let radix: u32 = 10;
-    let res:u32 = n
+    let res: u32 = n
         .to_string()
         .chars()
         .map(|c| c.to_digit(radix).unwrap())

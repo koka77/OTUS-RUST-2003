@@ -1,0 +1,7 @@
+[workspace]
+
+members = [
+    "less3",
+    "less6",
+    "less6_hw",
+]
